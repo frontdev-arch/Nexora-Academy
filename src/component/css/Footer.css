@@ -1,0 +1,136 @@
+/* Footer Styles */
+.footer {
+  background-color: #0A2240; /* Dark Blue */
+  color: white;
+  padding: 40px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Left Section (Logo & Description) */
+.footer-left {
+  flex: 1;
+  max-width: 350px;
+}
+
+.footer-logo {
+  width: 110px;
+  height: 101px;
+  align-items: left;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  
+}
+
+/* Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  color: #0A2240;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background: #f4a261;
+  color: white;
+}
+
+/* Center Section (Featured Links) */
+
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration-line: underline;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 17.6px;
+  transition: 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: wheat;
+}
+
+/* Right Section (Contact Info) */
+
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-contact i {
+  color: #f4a261;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+}
