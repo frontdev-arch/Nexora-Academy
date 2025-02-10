@@ -1,0 +1,232 @@
+/* Image Slider Styles */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 828px;
+    overflow: hidden;
+    margin-top: 131px;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  }
+  
+  .text-container {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure text is above the overlay */
+  }
+  
+  .text-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-container p {
+    font-size: 1.5rem;
+  }
+  
+  /* Welcome Section */
+  .mission-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit; /* Keep your original background */
+    color: inherit;
+    padding: 80px 10%;
+    opacity: 0;
+    transform: translateY(100px); /* Start lower */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    text-align: left;
+  }
+  
+  /* Add transition effect when the section is visible */
+  .mission-section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Mission Content Layout */
+  .mission-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  /* Left side (text) */
+  .mission-text {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .welcome-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: inherit; 
+    margin-bottom: 15px;
+  }
+  
+  .mission-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Discover Button */
+  .discover-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0A2240;; /* Matching theme */
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  /* Right side (image) */
+  .mission-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mission-image img {
+    max-width: 350px;
+    border-radius: 10px;
+  }
+  
+  /* Principal Name */
+  .principal-name {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .principal-name span {
+    display: block;
+    font-size: 1rem;
+    color: gray;
+  }
+  
+  /* Latest News Section */
+.news-section {
+    padding: 100px 10%;
+  }
+  
+  .news-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  /* News Container */
+  .news-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Aligns items to the left */
+    flex-wrap: wrap;
+  }
+  
+  /* News Card */
+  .news-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle dark overlay */
+    width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* News Image */
+  .news-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* News Content */
+  .news-card-content {
+    padding: 15px;
+  }
+  
+  .news-card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .news-card-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #000000;
+  }
+  
+  /* Button */
+  .news-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .primary-btn {
+    background-color: #0A2240;;  /* Green */
+    color: white;
+  }
+  
+  .primary-btn:hover {
+    background-color: #0A2240;; 
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .news-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .news-card {
+      width: 90%;
+    }
+  }
+  
